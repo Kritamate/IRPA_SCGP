@@ -74,10 +74,14 @@ function addKeyArrayValue(ProcessID, Key, Line) {
 function pushValuetoArray(Line){
     let valueArray = [];
     for(let i = 8; i <= 27; i++){
-        if (Line[i].toLowerCase() == 'x'){
-            valueArray.push(true);
-        } else{
-            valueArray.push(false);
+        if (i == 26) {
+            valueArray.push(Line[i].toLowerCase());
+        } else {
+            if (Line[i].toLowerCase() == 'x'){
+                valueArray.push(true);
+            } else{
+                valueArray.push(false);
+            }
         }
     }
     return valueArray;
