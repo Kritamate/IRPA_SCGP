@@ -1,4 +1,4 @@
-var input = "AC";
+var input = "AA";
 
 console.log(convertExcelColOrIndex(input));
 
